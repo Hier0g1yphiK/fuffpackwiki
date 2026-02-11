@@ -161,6 +161,43 @@
         font-size: 14px;
         min-width: 720px; /* encourages horizontal scroll on very small screens */
         }
+
+        /* Make long URLs behave */
+        #modsTable a{
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        }
+
+        @media (max-width: 640px) {
+        .page{ padding: 22px 14px; }
+        .hero{ padding: 18px 14px 14px; }
+        .card{ padding: 10px; }
+
+        /* Mobile table behavior: fit the screen instead of forcing 720px */
+        .table-wrap{
+          overflow-x: visible;       /* avoid “always scrolling sideways” feel */
+        }
+
+        #modsTable{
+          min-width: 0;              /* key: allow it to shrink to the viewport */
+          width: 100%;
+          table-layout: fixed;       /* stable column sizing on narrow screens */
+          font-size: 13px;
+        }
+
+        #modsTable thead th{
+          padding: 12px 10px;
+        }
+
+        #modsTable tbody td{
+          padding: 10px 10px;
+        }
+
+        /* Override inline column widths from the <th style="width: ..."> */
+        #modsTable th{
+          width: auto !important;
+        }
+        }
         #modsTable thead th {
         position: sticky;
         top: 0;
