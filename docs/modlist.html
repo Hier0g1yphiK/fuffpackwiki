@@ -6,7 +6,8 @@
   <title>Fuffpack Wiki — Modlist</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="solid-bg">
+
   <main class="page">
     <div class="shell">
       <nav class="navbar" aria-label="Top navigation">
@@ -727,3 +728,14 @@
   <script src="app.js"></script>
 </body>
 </html>
+body.solid-bg{
+  background: transparent;
+}
+
+body.solid-bg::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: -1;
+}
