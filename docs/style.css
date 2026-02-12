@@ -335,3 +335,8 @@ a:focus, button:focus, input:focus{
   .desc{ font-size: 15px; }
   .navbar{ top: 10px; }
 }
+
+/* Solid background variant for pages that set <body class="solid-bg"> */
+body.solid-bg{
+  background: var(--bg);
+}
